@@ -1,0 +1,19 @@
+#formAdd {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.form-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  width: 260px;
+}
+
+.btn-submit {
+  border: 1px solid #a2daff;
+  padding: 5%;
+  margin: 0 35% 0 0;
+  cursor: pointer;
+  background: #a2daff;
+}
