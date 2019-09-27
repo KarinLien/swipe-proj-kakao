@@ -16,9 +16,9 @@ class Home extends React.Component {
           <div className="member">
             <img src={Ryan} alt="ryan" />
           </div>
-          <div className="member">
-            <img src={Apeach} alt="ryan" />
-          </div>
+          {/* <div className="member">
+            <img src={Apeach} alt="Apeach" />
+          </div> */}
         </div>
       </Layout>
     );
