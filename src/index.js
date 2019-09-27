@@ -10,14 +10,16 @@ import { Route, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Registered from "./pages/Registered";
+import Product from "./pages/Product";
 
 ReactDOM.render(
   <HashRouter basename="/">
     <div>
-      <App />
+      {/* <App /> */}
       <Route exact path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/registered" component={Registered} />
+      <Route path="/product" component={Product} />
     </div>
   </HashRouter>,
   document.getElementById("root")

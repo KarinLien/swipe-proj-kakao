@@ -19,10 +19,15 @@ class Header extends React.Component {
           <Link to="/product" className="attu-link">
             PRODUCT
           </Link>
+          <Link to="/about" className="attu-link">
+            ABOUT
+          </Link>
         </div>
 
         <div className="logo">
-          <img src={Logo} alt="" />
+          <Link to="/">
+            <img src={Logo} alt="" />
+          </Link>
         </div>
         <div className="search-bar form-group">
           <div className="inner-div">
