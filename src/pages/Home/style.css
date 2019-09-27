@@ -1,6 +1,11 @@
+.people-div {
+  justify-content: center;
+  display: flex;
+}
+
 .member {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 .member img {
   width: 100%;
