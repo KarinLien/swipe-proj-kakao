@@ -6,7 +6,7 @@ import "./style.css";
 class PeopleIntro extends React.Component {
   render() {
     return (
-      <div className="member-introduction">PeopleIntro{this.props.name}</div>
+      <div>PeopleIntro{this.props.name}</div>
     );
   }
 }

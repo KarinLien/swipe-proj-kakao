@@ -49,7 +49,7 @@ class Home extends React.Component {
         </div>
         {members.map((member, index) => (
           <div ref={index} key={index} className="member-introduction">
-            {member.name}
+            <PeopleIntro name={member.name} />
           </div>
         ))}
       </Layout>
