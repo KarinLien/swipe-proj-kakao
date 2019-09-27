@@ -6,6 +6,7 @@ import "./style.css";
 
 import Ryan from "../../assets/home/people/Ryan.png";
 import Apeach from "../../assets/home/people/Apeach.png";
+import Tube from "../../assets/home/people/Tube.png";
 
 class Home extends React.Component {
   render() {
@@ -16,9 +17,12 @@ class Home extends React.Component {
           <div className="member">
             <img src={Ryan} alt="ryan" />
           </div>
-          {/* <div className="member">
+          <div className="member">
             <img src={Apeach} alt="Apeach" />
-          </div> */}
+          </div>
+          <div className="member">
+            <img src={Tube} alt="Tube" />
+          </div>
         </div>
       </Layout>
     );
