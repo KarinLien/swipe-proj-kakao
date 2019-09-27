@@ -6,7 +6,6 @@ import "./style.css";
 
 class Layout extends React.Component {
   goToTop = () => {
-    console.log("asdawdw");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   render() {
