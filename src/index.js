@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Registered from "./pages/Registered";
 import Product from "./pages/Product";
+import About from "./pages/About";
 
 ReactDOM.render(
   <HashRouter basename="/">
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Route path="/login" component={Login} />
       <Route path="/registered" component={Registered} />
       <Route path="/product" component={Product} />
+      <Route path="/about" component={About} />
     </div>
   </HashRouter>,
   document.getElementById("root")

@@ -3,7 +3,6 @@ import React from "react";
 /*------------- */
 import Layout from "../../components/Layout";
 import "./style.css";
-import A from "../../assets/pro/ryan-small.jpg";
 
 class Product extends React.Component {
   state = {
