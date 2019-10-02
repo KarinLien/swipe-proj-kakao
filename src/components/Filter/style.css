@@ -65,6 +65,8 @@
   border-color: rgb(212, 215, 225);
   border-image: initial;
   padding: 13px 16px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .filter-select-box-Newarrivals {
   position: absolute;
@@ -91,4 +93,44 @@
   height: 48px;
   line-height: 48px;
   cursor: pointer;
+}
+
+/*----*/
+
+.select-cont-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 7px 4px;
+}
+.select-cont-box div {
+  position: relative;
+}
+
+.select-cont-box-span {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+.select-cont-box-span img {
+  width: 60px;
+  height: 60px;
+}
+.select-true {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+.select-true img {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
