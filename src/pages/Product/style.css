@@ -3,6 +3,10 @@
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
+  clear: right;
+}
+.float-right {
+  float: right;
 }
 .pdt-box {
   margin: 10px;

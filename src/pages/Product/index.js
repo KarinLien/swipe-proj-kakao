@@ -2,6 +2,7 @@ import React from "react";
 
 /*------------- */
 import Layout from "../../components/Layout";
+import Filter from "../../components/Filter";
 import "./style.css";
 
 class Product extends React.Component {
@@ -20,6 +21,9 @@ class Product extends React.Component {
     const { pro } = this.state;
     return (
       <Layout>
+        <div className="float-right">
+          <Filter />
+        </div>
         <div className="pdt-big-box">
           {pro.length !== 0 ? (
             pro.map(item => (
@@ -52,7 +56,7 @@ class Product extends React.Component {
               </div>
             ))
           ) : (
-            <span>no product</span>
+            <div>no product</div>
           )}
         </div>
       </Layout>
