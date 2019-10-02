@@ -67,6 +67,7 @@
   padding: 13px 16px;
   display: flex;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 .filter-select-box-Newarrivals {
   position: absolute;
@@ -96,7 +97,7 @@
   cursor: pointer;
 }
 .filter-select-cont-Newarrivals a:hover {
- background-color: rgb(247, 247, 247);
+  background-color: rgb(247, 247, 247);
 }
 
 .filter-select-cont-Newarrivals a {
@@ -108,7 +109,7 @@
   width: calc(100% - 20px);
   height: 100%;
   font-size: 16px;
-  
+
   color: rgb(30, 30, 30);
   padding: 0px 20px;
   text-decoration: none;
