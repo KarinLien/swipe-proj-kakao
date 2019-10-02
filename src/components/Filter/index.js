@@ -172,7 +172,9 @@ class Filter extends React.Component {
                   key={item.id}
                   onClick={() => this.chooseNewArrival(item.name)}
                 >
-                  <a>{item.name}</a>
+                  <span>
+                    {item.name}
+                  </span>
                 </li>
               ))}
             </ul>
