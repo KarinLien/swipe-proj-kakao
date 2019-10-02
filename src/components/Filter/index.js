@@ -144,9 +144,15 @@ class Filter extends React.Component {
         {Newarrivals ? (
           <div className="filter-select-box-Newarrivals">
             <ul className="filter-select-cont-Newarrivals">
-              <li>New arrivals</li>
-              <li>Price low to high</li>
-              <li>Price high to low</li>
+              <li>
+                <a href="#####">New arrivals</a>
+              </li>
+              <li>
+                <a href="#####">Price low to high</a>
+              </li>
+              <li>
+                <a href="#####">Price high to low</a>
+              </li>
             </ul>
           </div>
         ) : (

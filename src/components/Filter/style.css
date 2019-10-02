@@ -85,6 +85,7 @@
   border-image: initial;
   overflow: hidden;
   margin: 0;
+  padding: 0;
 }
 .filter-select-cont-Newarrivals li {
   display: flex;
@@ -93,6 +94,24 @@
   height: 48px;
   line-height: 48px;
   cursor: pointer;
+}
+.filter-select-cont-Newarrivals a:hover {
+ background-color: rgb(247, 247, 247);
+}
+
+.filter-select-cont-Newarrivals a {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  width: calc(100% - 20px);
+  height: 100%;
+  font-size: 16px;
+  
+  color: rgb(30, 30, 30);
+  padding: 0px 20px;
+  text-decoration: none;
 }
 
 /*----*/
