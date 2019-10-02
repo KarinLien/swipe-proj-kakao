@@ -7,7 +7,7 @@ import up from "../../assets/common/dropdown_up.png";
 import selectTrue from "../../assets/common/category_icn-done.png";
 /**------------- */
 
-const selectData = [
+const selectCharactersData = [
   {
     name: "전체",
     engName: "All",
@@ -54,10 +54,18 @@ const selectData = [
   { name: "콘", engName: "Con", img: "category_con_off.png", imgName: "con" }
 ];
 
+const selectNewarrivalsData = [
+  { id: "1", name: "New arrivals" },
+  { id: "2", name: "Price low to high" },
+  { id: "3", name: "Price high to low" }
+];
+
 class Filter extends React.Component {
   state = {
     AllCharacters: false,
     Newarrivals: false,
+    chooseNewArrival: "New arrivals",
+    chooseCharacters: "All Characters",
     Characters: 0,
     hoverNumber: 0
   };
@@ -73,9 +81,11 @@ class Filter extends React.Component {
       Newarrivals: !this.state.Newarrivals
     });
   };
-  chooseCharacters = index => {
+  chooseCharacters = (index, name) => {
     this.setState({
-      Characters: index
+      Characters: index,
+      chooseCharacters: name,
+      AllCharacters: false
     });
   };
   mouseEvent = index => {
@@ -83,32 +93,45 @@ class Filter extends React.Component {
       hoverNumber: index
     });
   };
+  chooseNewArrival = name => {
+    this.setState({
+      chooseNewArrival: name,
+      Newarrivals: false
+    });
+  };
   render() {
-    const { Newarrivals, AllCharacters, Characters, hoverNumber } = this.state;
+    const {
+      Newarrivals,
+      AllCharacters,
+      Characters,
+      hoverNumber,
+      chooseNewArrival,
+      chooseCharacters
+    } = this.state;
     return (
       <div className="filter-big-box">
         <div
           className="filter-box filter-left"
           onClick={this.clickAllCharacters}
         >
-          <span>All Characters</span>
+          <span>{chooseCharacters}</span>
           <img src={AllCharacters ? up : down} alt="down" />
         </div>
         <div
           className="filter-box filter-right"
           onClick={this.clickNewArrivals}
         >
-          <span>New arrivals</span>
+          <span>{chooseNewArrival}</span>
           <img src={Newarrivals ? up : down} alt="down" />
         </div>
         {AllCharacters ? (
           <div className="filter-select-box-AllCharacters">
             <div className="filter-select-cont-AllCharacters">
-              {selectData.map((item, index) => (
+              {selectCharactersData.map((item, index) => (
                 <div
                   className="select-cont-box"
                   key={index}
-                  onClick={() => this.chooseCharacters(index)}
+                  onClick={() => this.chooseCharacters(index, item.name)}
                   onMouseOver={() => this.mouseEvent(index)}
                   onMouseLeave={() => this.mouseEvent(index)}
                 >
@@ -144,15 +167,14 @@ class Filter extends React.Component {
         {Newarrivals ? (
           <div className="filter-select-box-Newarrivals">
             <ul className="filter-select-cont-Newarrivals">
-              <li>
-                <a href="#####">New arrivals</a>
-              </li>
-              <li>
-                <a href="#####">Price low to high</a>
-              </li>
-              <li>
-                <a href="#####">Price high to low</a>
-              </li>
+              {selectNewarrivalsData.map((item, index) => (
+                <li
+                  key={item.id}
+                  onClick={() => this.chooseNewArrival(item.name)}
+                >
+                  <a>{item.name}</a>
+                </li>
+              ))}
             </ul>
           </div>
         ) : (
