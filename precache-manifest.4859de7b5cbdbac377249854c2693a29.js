@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4645ffb4873d9c8be3ae461cda869272",
+    "revision": "d543eb0c730ad6cf7c3555220bd09a1e",
     "url": "/proj/index.html"
   },
   {
-    "revision": "d8bf7aa9470e794fa085",
-    "url": "/proj/static/css/main.a3e55756.chunk.css"
+    "revision": "4617359fe3754c322fda",
+    "url": "/proj/static/css/main.c410ede4.chunk.css"
   },
   {
-    "revision": "369f989bbeb338cd8e28",
-    "url": "/proj/static/js/2.9ac865e6.chunk.js"
+    "revision": "fc6127f7a46a0f834c5c",
+    "url": "/proj/static/js/2.e099550c.chunk.js"
   },
   {
-    "revision": "d8bf7aa9470e794fa085",
-    "url": "/proj/static/js/main.7f68a33a.chunk.js"
+    "revision": "4617359fe3754c322fda",
+    "url": "/proj/static/js/main.1e16aa15.chunk.js"
   },
   {
     "revision": "11698ca9391bd8eb0528",
@@ -86,6 +86,62 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5e4e0c4ef4f8ef3138fc261b7c30590a",
     "url": "/proj/static/media/Tube.5e4e0c4e.png"
+  },
+  {
+    "revision": "1e99863fcf5c1c36ade15ebcc1820b0b",
+    "url": "/proj/static/media/category_apeach_off.1e99863f.png"
+  },
+  {
+    "revision": "073a4eb1cfe9a888afaf04b59c032936",
+    "url": "/proj/static/media/category_apeach_on.073a4eb1.png"
+  },
+  {
+    "revision": "3137a5a8d08c2881a8089f5bab667928",
+    "url": "/proj/static/media/category_frodo_off.3137a5a8.png"
+  },
+  {
+    "revision": "fbb2427669874ebef7ec04fda276a7fd",
+    "url": "/proj/static/media/category_frodo_on.fbb24276.png"
+  },
+  {
+    "revision": "845f0ce4804ce6f7000912cb1d158dff",
+    "url": "/proj/static/media/category_jayz_off.845f0ce4.png"
+  },
+  {
+    "revision": "02cb5d30f4cb88f842ba9b59f45adbf8",
+    "url": "/proj/static/media/category_jayz_on.02cb5d30.png"
+  },
+  {
+    "revision": "76de36ac802dc02468c226d5625c5eca",
+    "url": "/proj/static/media/category_muzi_off.76de36ac.png"
+  },
+  {
+    "revision": "f72dfd4a18ea430f16209a3b76108fca",
+    "url": "/proj/static/media/category_muzi_on.f72dfd4a.png"
+  },
+  {
+    "revision": "a35245d7822551ecb8e2c1bd24e3269a",
+    "url": "/proj/static/media/category_neo_off.a35245d7.png"
+  },
+  {
+    "revision": "64446bd20e20cab44db1f3126b57a82e",
+    "url": "/proj/static/media/category_neo_on.64446bd2.png"
+  },
+  {
+    "revision": "69d4bef97f7f75ce5b08e594eaf153ec",
+    "url": "/proj/static/media/category_rion_off.69d4bef9.png"
+  },
+  {
+    "revision": "c4b8fa4049e578d7972aeee99b414165",
+    "url": "/proj/static/media/category_rion_on.c4b8fa40.png"
+  },
+  {
+    "revision": "0ba48760bdde28d20b39ae6fa1a88dbf",
+    "url": "/proj/static/media/category_tube_off.0ba48760.png"
+  },
+  {
+    "revision": "339e30f7ab4b84927bb1abec0ac84cf5",
+    "url": "/proj/static/media/category_tube_on.339e30f7.png"
   },
   {
     "revision": "6042dfe885dc16b8e3b7fa20e9f831d3",
