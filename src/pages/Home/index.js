@@ -3,6 +3,10 @@ import React from "react";
 import Layout from "../../components/Layout";
 import "./style.css";
 import PeopleIntro from "../../components/PeopleIntro";
+
+/*---------------- */
+import { ClickApp } from "../../store/actions";
+import { connect } from "react-redux";
 /*----------- */
 class Home extends React.Component {
   state = { index: 0 };
@@ -10,6 +14,9 @@ class Home extends React.Component {
     this.setState({ index: i });
     this.refs[i].scrollIntoView({ behavior: "smooth" });
   }
+  ClickApp = () => {
+    this.props.ClickApp();
+  };
   render() {
     const members = [
       { name: "Ryan" },
@@ -42,9 +49,27 @@ class Home extends React.Component {
             <PeopleIntro name={member.name} />
           </div>
         ))}
+        <button onClick={this.ClickApp}>SUBMIT</button>
       </Layout>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return {
+    click: state.ForApp.AppClick
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    ClickApp: () => {
+      dispatch(ClickApp());
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

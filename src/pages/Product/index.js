@@ -5,28 +5,25 @@ import Layout from "../../components/Layout";
 import Filter from "../../components/Filter";
 import "./style.css";
 
+/*----- */
+import { fetchProduct } from "../../store/actions";
+import { connect } from "react-redux";
+
 class Product extends React.Component {
-  state = {
-    pro: []
-  };
-  async componentDidMount() {
-    const port = "2999";
-    const response = await fetch(`http://127.0.0.1:${port}/api/product/`);
-    const data = await response.json();
-    this.setState({
-      pro: data
-    });
+
+  componentDidMount() {
+    this.props.fetchProduct();
   }
   render() {
-    const { pro } = this.state;
+    const { ProductData } = this.props;
     return (
       <Layout>
         <div className="float-right">
           <Filter />
         </div>
         <div className="pdt-big-box">
-          {pro.length !== 0 ? (
-            pro.map(item => (
+          {ProductData.length !== 0 ? (
+            ProductData.map(item => (
               <div className="pdt-box" key={item.name}>
                 <div className="pdt-img-box">
                   <img
@@ -63,4 +60,22 @@ class Product extends React.Component {
     );
   }
 }
-export default Product;
+
+const mapStateToProps = state => {
+  return {
+    ProductData: state.Product.ProductList
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchProduct: () => {
+      dispatch(fetchProduct());
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Product);
