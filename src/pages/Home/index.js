@@ -50,7 +50,6 @@ class Home extends React.Component {
             <PeopleIntro name={member.name} />
           </div>
         ))}
-        <button onClick={this.ClickApp}>SUBMIT</button>
       </Layout>
     );
   }
