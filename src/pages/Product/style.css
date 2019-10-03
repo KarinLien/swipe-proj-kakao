@@ -1,7 +1,11 @@
+.pdt-big-box-padding-8{
+  padding: 8%;
+}
+
 .pdt-big-box {
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: baseline;
   flex-wrap: wrap;
   clear: right;
 }
