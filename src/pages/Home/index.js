@@ -7,7 +7,7 @@ import PeopleIntro from "../../components/PeopleIntro";
 /*---------------- */
 import { ClickApp } from "../../store/actions";
 import { connect } from "react-redux";
-/*----------- */
+/*--------------- */
 class Home extends React.Component {
   state = { index: 0 };
   handleShow(i) {

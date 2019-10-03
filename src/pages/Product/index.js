@@ -4,8 +4,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import Filter from "../../components/Filter";
 import "./style.css";
-
-/*----- */
+/*------------- */
 import { fetchProduct } from "../../store/actions";
 import { connect } from "react-redux";
 

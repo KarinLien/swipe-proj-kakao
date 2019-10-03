@@ -6,6 +6,8 @@ import down from "../../assets/common/dropdown_down.png";
 import up from "../../assets/common/dropdown_up.png";
 import selectTrue from "../../assets/common/category_icn-done.png";
 /**------------- */
+import { filterCharacters } from "../../store/actions";
+import { connect } from "react-redux";
 
 const selectCharactersData = [
   {
@@ -81,7 +83,8 @@ class Filter extends React.Component {
       Newarrivals: !this.state.Newarrivals
     });
   };
-  chooseCharacters = (index, name) => {
+  chooseCharacters = (index, name, engName) => {
+    this.props.filterCharacters(engName);
     this.setState({
       Characters: index,
       chooseCharacters: name,
@@ -131,7 +134,9 @@ class Filter extends React.Component {
                 <div
                   className="select-cont-box"
                   key={index}
-                  onClick={() => this.chooseCharacters(index, item.name)}
+                  onClick={() =>
+                    this.chooseCharacters(index, item.name, item.engName)
+                  }
                   onMouseOver={() => this.mouseEvent(index)}
                   onMouseLeave={() => this.mouseEvent(index)}
                 >
@@ -172,9 +177,7 @@ class Filter extends React.Component {
                   key={item.id}
                   onClick={() => this.chooseNewArrival(item.name)}
                 >
-                  <span>
-                    {item.name}
-                  </span>
+                  <span>{item.name}</span>
                 </li>
               ))}
             </ul>
@@ -186,4 +189,22 @@ class Filter extends React.Component {
     );
   }
 }
-export default Filter;
+const mapStateToProps = state => {
+  return {
+    ProductData: state.Product.ProductList
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    filterCharacters: engName => {
+     
+      dispatch(filterCharacters(engName));
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Filter);
